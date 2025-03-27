@@ -78,7 +78,7 @@ void loop()
           playNote(notes[i+(a*14)], beats[i] * tempo);
         }
         // pause between notes
-        delay(tempo / 2); 
+        delay(tempo / 1); 
       }
 
       if(usExit == 1)
