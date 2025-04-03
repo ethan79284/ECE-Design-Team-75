@@ -1,0 +1,30 @@
+// C++ code
+//
+int BUTTON = 0;
+
+int x = 0;
+
+void setup()
+{
+  pinMode(2, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  digitalWrite(2, LOW);
+  if (x <= 100) {
+    Serial.println(x);
+    x += 1;
+    digitalWrite(2, HIGH);
+  } else {
+    if (x <= 200) {
+      digitalWrite(2, LOW);
+      x += 1;
+    }
+    if (x > 200) {
+      x = 0;
+    }
+  }
+  delay(10); // Delay a little bit to improve simulation performance
+}
